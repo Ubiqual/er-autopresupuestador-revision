@@ -1,0 +1,380 @@
+{
+  "admin": {
+    "pages": {
+      "title": "Administrador",
+      "subTitle": "Administración",
+      "base": "Base Toma y Deje",
+      "busTypes": "Tipos de Autocares",
+      "services": "Servicios",
+      "busCategory": "Categorías Autocares",
+      "users": "Usuarios",
+      "vat": "IVA",
+      "maximumDrivingTime": "Tiempo máximo conducción",
+      "googleIncrement": "Incremento sobre tiempo Google",
+      "seasons": "Temporadas",
+      "seasonDays": "Días temporada",
+      "peakHours": "Horario Punta",
+      "nightTime": "Horario Nocturnidad",
+      "basePrice": "Precio Base",
+      "serviceMinimumPricing": "Toma y deje",
+      "extra": "Dietas",
+      "configureTrips": "Configurar viajes",
+      "configureWeddings": "Configurar bodas",
+      "roles": {
+        "title": "Administración Usuarios",
+        "addUser": "Para añadir un nuevo usuario se han de seguir los siguientes pasos:",
+        "step1": "Usuario se registra en la página principal.",
+        "step2": "Una vez se ha creado su usuario lo buscamos por correo electrónico.",
+        "step3": "Le asignamos el rol correspondiente.",
+        "filter": "Filtrar:",
+        "allRoles": "Todos los roles",
+        "admin": "Admin",
+        "staff": "Staff",
+        "user": "Usuario",
+        "searchByEmail": "Buscar por email",
+        "buttons": {
+          "adminRole": "Dar rol de Admin",
+          "staffRole": "Dar rol de Staff",
+          "userRole": "Dar rol de Usuario"
+        }
+      },
+      "searchedTrips": "Presupuestos",
+      "bookingDetails": "Detalle presupuesto"
+    },
+    "placeholders": {
+      "search": "Continuar",
+      "startDate": "Fecha de Inicio",
+      "endDate": "Fecha de Fin"
+    },
+    "columns": {
+      "address": "Dirección",
+      "actions": "Acciones",
+      "numberOfPeople": "Número de personas",
+      "adjustmentPercentage": "Ajuste porcentual",
+      "isDefault": "Tarifa por defecto",
+      "rangeMaxSeats": "Número máximo de plazas",
+      "rangeMinSeats": "Número mínimo de plazas",
+      "name": "Nombre",
+      "order": "Orden",
+      "rate": "Tarifa",
+      "drivingTime": "Tiempo máximo conducción",
+      "restDuration": "Tiempo descanso",
+      "color": "Color",
+      "startTimeMorning": "Hora inicio mañana",
+      "endTimeMorning": "Hora fin mañana",
+      "startTimeAfternoon": "Hora inicio tarde",
+      "endTimeAfternoon": "Hora fin tarde",
+      "startTime": "Hora inicio",
+      "endTime": "Hora fin",
+      "pricePerKm": "Precio por Km",
+      "pricePerMinute": "Precio por minuto",
+      "minimumKM": "Kilómetros mínimos",
+      "minimumTime": "Tiempo mínimo",
+      "serviceName": "Nombre del servicio",
+      "price": "Precio",
+      "excursionsLimit": "Tiempo máximo conductor disponible",
+      "fullDayDriving": "Tiempo máximo conducción con descansos",
+      "fullDayRest": "Tiempo descanso día completo",
+      "email": "Email",
+      "role": "Rol",
+      "minimumKmPerDay": "Kilómetros mínimos por día",
+      "minimumTimePerDay": "Tiempo mínimo por día",
+      "minimumReturnTime": "Tiempo mínimo entre celebración y último destino",
+      "budgetDate": "Fecha del Presupuesto",
+      "service": "Servicio",
+      "days": "Número de Días",
+      "totalPrice": "Precio Total",
+      "numberOfBuses": "Número de Autocares",
+      "startAddress": "Dirección de Inicio",
+      "serviceDate": "Fecha del Servicio",
+      "fullName": "Nombre completo",
+      "userType": "Tipo de usuario",
+      "city": "Ciudad",
+      "country": "País",
+      "phone": "Teléfono",
+      "postalCode": "Código postal",
+      "province": "Provincia",
+      "contacto": "Contacto",
+      "editClient": "Editar Cliente",
+      "bookingType": "Estado presupuesto",
+      "userEmail": "Email",
+      "accepted": "Reserva confirmada",
+      "declined": "Reserva denegada",
+      "requested": "Reserva solicitada",
+      "saved": "Presupuesto guardado",
+      "createBooking": "Crear reserva",
+      "admin_saved": "Admin guardado"
+    },
+    "buttons": {
+      "create": "Añadir",
+      "edit": "editar",
+      "delete": "Borrar",
+      "logout": "Cerrar sesión",
+      "search": "continuar",
+      "save": "continuar",
+      "cancel": "cancelar",
+      "login": "Iniciar sesión",
+      "nextDay": "Día siguiente",
+      "clear": "Eliminar filtro",
+      "saveBooking": "guardar",
+      "addExtra": "Añadir partida",
+      "recalculate": "Recalcular",
+      "requestBooking": "solicitar reserva",
+      "sendToEmail": "Send to Email",
+      "review": "revisar",
+      "newBudget": "nuevo presupuesto",
+      "sendEmail": "Enviar email"
+    },
+    "busTypesPage": {
+      "true": "si"
+    },
+    "modalLabels": {
+      "restHours": {
+        "maxDrivingTime": "Tiempo máximo conducción sin descanso (horas)",
+        "mandatoryRest": "Tiempo descanso obligatorio (horas)",
+        "excursionsDurationLimit": "Tiempo máximo conductor disponible (horas)",
+        "fullDayDriving": "Tiempo máximo conducción con descansos (horas)",
+        "fullDayRest": "Tiempo descanso día completo (horas)"
+      },
+      "baseAddress": {
+        "address": "Dirección"
+      },
+      "baseCost": {
+        "pricePerKm": "Precio por Km",
+        "pricePerMinute": "Precio por minuto"
+      },
+      "busCategory": {
+        "name": "Nombre",
+        "adjustmentPercentage": "Ajuste porcentual (%)"
+      },
+      "busType": {
+        "numberOfPeople": "Número de personas",
+        "MinimumSeats": "Número mínimo de plazas",
+        "MaximumSeats": "Número máximo de plazas",
+        "adjustmentPercentage": "Ajuste porcentual (%)"
+      },
+      "busyHours": {
+        "morningBusyHours": "Hora punta mañana",
+        "afternoonBusyHours": "Hora punta tarde",
+        "adjustmentPercentage": "Ajuste porcentual (%)"
+      },
+      "extras": {
+        "name": "Nombre",
+        "price": "Precio (€)",
+        "hours": "Horario"
+      },
+      "googleIncrement": {
+        "increment": "Incremento sobre tiempo Google (%)"
+      },
+      "nightHours": {
+        "nightHours": "Horario nocturnidad",
+        "adjustmentPercentage": "Ajuste porcentual (%)"
+      },
+      "season": {
+        "name": "Nombre temporada",
+        "adjustmentPercentage": "Ajuste porcentual (%)"
+      },
+      "service": {
+        "name": "Nombre",
+        "order": "Orden"
+      },
+      "serviceMinimumPricing": {
+        "minimumKm": "Kilómetros mínimos",
+        "minimumTime": "Tiempo mínimo (minutos)"
+      },
+      "VAT": {
+        "vatRate": "IVA (%)"
+      },
+      "configureTrips": {
+        "minimumKm": "Kilómetros mínimos por día",
+        "minimumTimePerDay": "Tiempo mínimo por día"
+      },
+      "configureWeddings": {
+        "name": "Tiempo mínimo entre celebración y último destino"
+      },
+      "addExtra": {
+        "title": "Añadir partida",
+        "description": "Descripción de la partida",
+        "price": "Precio de la partida",
+        "day": "Día",
+        "selectDay": "Seleccionar día"
+      }
+    },
+    "bookings": {
+      "bookedBusesTitle": "Autocares",
+      "busSummary": "Tipo de autocar: %{busTypeId}, cantidad: %{quantity}"
+    },
+    "pagination": {
+      "noPages": "No se han encontrado resultados",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "page": "Página",
+      "of": "de"
+    },
+    "errors": {
+      "userEmailNotFound": "Correo electrónico del usuario no encontrado.",
+      "saveFailed": "Error al guardar la reserva.",
+      "bookingSaveFailed": "Error al guardar la reserva.",
+      "emailFailedTitle": "Error de correo electrónico",
+      "bookingFailedTitle": "Error de reserva",
+      "unexpectedError": "Ocurrió un error inesperado. Por favor, inténtelo de nuevo más tarde.",
+      "adminEmailFailed": "Error al enviar el correo electrónico al administrador.",
+      "emailFailed": "Error al enviar el correo electrónico.",
+      "dbImportsError": "Error al importar datos de la base de datos.",
+      "noSeasonFound": "No se encontró una temporada para la fecha seleccionada.",
+      "noPricingData": "No se encontraron datos de precios.",
+      "restHoursFetchError": "Error al obtener las horas de descanso.",
+      "extrasCalculationError": "Error al calcular los extras: %{message}."
+    },
+    "success": {
+      "bookingRequested": "Su solicitud de reserva ha sido enviada.",
+      "bookingSaved": "Su reserva se ha guardado con éxito.",
+      "bookingSavedTitle": "reserva guardada",
+      "bookingSuccessfulTitle": "Reserva exitosa",
+      "emailSent": "El correo electrónico ha sido enviado con éxito."
+    },
+    "email": {
+      "subject": "¡nos ponemos en marcha!",
+      "requestSubject": "Detalles de la solicitud de reserva",
+      "adminRequestSubject": "Nueva solicitud de reserva",
+      "accepted": "Reserva aceptada",
+      "declined": "Reserva rechazada",
+      "bookingSaved": "Su reserva se ha guardado con éxito."
+    }
+  },
+  "deleteCustomExtraModal": {
+    "title": "¿Estás seguro?",
+    "description": "¿Realmente deseas eliminar esta partida extra? Esta acción no se puede deshacer."
+  },
+  "loggedIn": "Bienvenido, %{email}",
+  "bookingPage": {
+    "title": "selecciona el tipo de servicio",
+    "labels": {
+      "locations": "lugar de inicio y fin",
+      "pickupDate": "fecha inicio",
+      "pickupTime": "hora inicio",
+      "selectBus": "número de vehículos",
+      "bus": "autocar",
+      "buses": "autocares"
+    },
+    "placeholders": {
+      "locations": "Selecciona una ubicación",
+      "pickupDate": "Selecciona una fecha",
+      "selectBus": "Selecciona nº de vehículos",
+      "selectedBuses": "Autocares seleccionados",
+      "selectedSingleBus": "Autocar seleccionado",
+      "selectTime": "Selecciona una hora"
+    },
+    "locationsModal": {
+      "pickup": "inicio",
+      "pickupWedding": "Lugar de inicio",
+      "celebration": "Lugar de celebración",
+      "dropOff": "fin",
+      "dropOffWedding": "Lugar de destino",
+      "pickupLocation": "Selecciona una ubicación",
+      "dropOffLocation": "Selecciona una ubicación",
+      "stop": "Destino",
+      "stopTransfers": "Parada Intermedia",
+      "stopWedding": "Parada",
+      "addStop": "añadir destino",
+      "addStopWedding": "añadir parada",
+      "addRegularStop": "Añadir destino",
+      "addRegularStopWedding": "Añadir parada",
+      "addLastStop": "Añadir lugar de celebración",
+      "errorMessage": "Debes completar todos los campos!",
+      "addStopTranslados": "añadir parada intermedia"
+    },
+    "tripsModal": {
+      "SelectNumberOfDays": "Seleccionar número de días de tu viaje",
+      "cancel": "Cancelar",
+      "continue": "continuar",
+      "day": "Día"
+    },
+    "busOptions": "Autocar %{numberOfPeople} personas",
+    "noTollsIncluded": "*Peajes no incluidos",
+    "errors": {
+      "title": "Error",
+      "longerThan14H": "Total duración de un día no puede superar las %{hours} horas desde inicio hasta fin.",
+      "longerDriveThan9H": "Total tiempo de conducción desde inicio hasta fin supera las %{hours} horas.",
+      "longerDriveThan2H": "El lugar de celebración se encuentra demasiado lejos.",
+      "longerDriveThan18H": "Total tiempo de conducción del autocar supera las %{hours} horas.",
+      "longerDriveThanDaysDefined": "Tiempo total de viaje excede los %{days} días",
+      "lastReturnShouldHaveAllBuses": "Debes seleccionar %{buses} en el último destino",
+      "configurationLoadError": "Ha ocurrido un problema al cargar la configuración requerida. Por favor, actualiza la página o inténtalo de nuevo más tarde."
+    },
+    "returnTripsModal": {
+      "title": "Seleccione los horarios de regreso:",
+      "addTrip": "Añadir traslado de regreso",
+      "trip": "Traslado de regreso",
+      "selectBus": "Número de vehículos"
+    },
+    "busReturns": "Seleccionar uno o más retornos",
+    "vat": "IVA incluido %{vat}",
+    "luxPromo": "Por sólo {{price}} más disfruta de "
+  },
+  "timeInputPlaceholder": "Hora de salida",
+  "busSelection": {
+    "singleBus": "%{count} autocar de %{seats} personas",
+    "multipleBuses": "%{count} autocares de %{seats} personas"
+  },
+  "results": {
+    "totalPrice": "Total %{price}",
+    "noStops": "Sin destinos intermedios",
+    "summary": "¡muchas gracias!",
+    "information": "Te hemos enviado los detalles del presupuesto por email",
+    "reminder": "No olvides solicitar la reserva del servicio. En ese caso, estudiaremos nuestra disponibilidad y confirmaremos tu reserva."
+  },
+  "header": {
+    "myBudgets": "Mis presupuestos"
+  },
+  "footer": {
+    "logoAlt": "Esteban Rivas Logo",
+    "address": {
+      "line1": "Eratóstenes, 15",
+      "line2": "Polígono Industrial San Marcos",
+      "line3": "28906 Getafe - Madrid"
+    },
+    "phone": {
+      "number": "916 937 711",
+      "commercial": "Atención comercial: L-D de 9-18h",
+      "customerService": "Atención al cliente: 24 horas / 365 días"
+    },
+    "email": "info@estebanrivas.es",
+    "links": {
+      "aboutUs": "sobre nosotros",
+      "ourHistory": "nuestra historia",
+      "ourTeam": "nuestro equipo",
+      "ourClients": "nuestros clientes",
+      "faq": "preguntas frecuentes",
+      "contact": "contacto",
+      "blog": "blog",
+      "ourServices": "nuestros servicios",
+      "busRental": "Alquiler de autocares, minibuses y microbuses",
+      "movingStorage": "Mudanzas y guardamuebles",
+      "carRental": "Alquiler de coches y minivans con chófer",
+      "vanRental": "Alquiler de furgonetas",
+      "storageRental": "Alquiler de trasteros",
+      "vehicleMaintenance": "Aparcamientos y mantenimiento de vehículos pesados",
+      "workWithUs": "trabaja con nosotros"
+    },
+    "rightsReserved": "Esteban Rivas S.A. Todos los derechos reservados.",
+    "policies": {
+      "legalNotice": {
+        "text": "Aviso Legal",
+        "link": "https://estebanrivas.es/aviso-legal/"
+      },
+      "cookiePolicy": {
+        "text": "Política de Cookies",
+        "link": "https://estebanrivas.es/politica-de-cookies/"
+      },
+      "qualityPolicy": {
+        "text": "Política de Calidad / Política Ambiental",
+        "link": "https://estebanrivas.es/politica-de-calidad/"
+      },
+      "ethicalChannel": {
+        "text": "Canal Ético",
+        "link": "https://www.suiteadeplus.com/web/canal-etico/registro?id=Hrvs6iN0"
+      }
+    }
+  }
+}

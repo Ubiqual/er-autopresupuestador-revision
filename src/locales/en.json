@@ -1,0 +1,363 @@
+{
+  "admin": {
+    "pages": {
+      "title": "Administrador",
+      "subTitle": "Administration",
+      "base": "Take and Leave Base",
+      "busTypes": "Bus Types",
+      "services": "Services",
+      "busCategory": "Bus Category",
+      "users": "Users",
+      "vat": "VAT",
+      "maximumDrivingTime": "Maximum Driving Time",
+      "googleIncrement": "Increase over Google Time",
+      "seasons": "Seasons",
+      "seasonDays": "Season Days",
+      "peakHours": "Peak Hours",
+      "nightTime": "Night Time",
+      "basePrice": "Base Price",
+      "serviceMinimumPricing": "Service Minimum Pricing",
+      "extra": "Extras",
+      "configureTrips": "Configure Trips",
+      "configureWeddings": "Configure Weddings",
+      "roles": {
+        "title": "User Administration",
+        "addUser": "To add a new user, follow the following steps:",
+        "step1": "User registers on the main page.",
+        "step2": "Once your user has been created, we search for it by email.",
+        "step3": "We assign the corresponding role.",
+        "filter": "Filter:",
+        "allRoles": "All roles",
+        "admin": "Admin",
+        "staff": "Staff",
+        "user": "User",
+        "searchByEmail": "Search by email",
+        "buttons": {
+          "adminRole": "Give Admin Role",
+          "staffRole": "Give Staff Role",
+          "userRole": "Give User Role"
+        }
+      },
+      "searchedTrips": "Searched Trips",
+      "bookingDetails": "Booking Details"
+    },
+    "placeholders": {
+      "search": "Search",
+      "startDate": "Start Date",
+      "endDate": "End Date"
+    },
+    "columns": {
+      "address": "Address",
+      "actions": "Actions",
+      "numberOfPeople": "Number of People",
+      "adjustmentPercentage": "Adjustment Percentage",
+      "isDefault": "Is Default",
+      "rangeMaxSeats": "Max Number of Seats",
+      "rangeMinSeats": "Min Number of Seats",
+      "name": "Name",
+      "order": "Order",
+      "rate": "Rate",
+      "drivingTime": "Limit of Driving Time",
+      "restDuration": "Limit Rest Duration",
+      "color": "Color",
+      "startTimeMorning": "Start Time In the Morning",
+      "endTimeMorning": "End Time In the Morning",
+      "startTimeAfternoon": "Start Time In the Afternoon",
+      "endTimeAfternoon": "End Time In the Afternoon",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "pricePerKm": "Price per Kilometer",
+      "pricePerMinute": "Price per Minute",
+      "minimumKM": "Minimum Kilometers",
+      "minimumTime": "Minimum Minutes",
+      "serviceName": "Name of the Service",
+      "price": "Price in Euros",
+      "excursionsLimit": "Excursions limit",
+      "fullDayDriving": "Full day driving",
+      "fullDayRest": "Full day rest",
+      "email": "Email",
+      "role": "Role",
+      "minimumKmPerDay": "Minimum Kilometers Per Day",
+      "minimumTimePerDay": "Minimum Time Per Day",
+      "minimumReturnTime": "Minimum Return Time",
+      "budgetDate": "Date of Budget",
+      "service": "Service",
+      "days": "Number of Days",
+      "totalPrice": "Total Price",
+      "numberOfBuses": "Number of Buses",
+      "startAddress": "Start Address",
+      "serviceDate": "Date of Service",
+      "fullName": "Full Name",
+      "userType": "User Type",
+      "city": "City",
+      "country": "Country",
+      "phone": "Phone",
+      "postalCode": "Postal Code",
+      "province": "Province",
+      "contacto": "Contact",
+      "editClient": "Editar Cliente",
+      "createBooking": "Create Booking",
+      "admin_saved": "Admin saved"
+    },
+    "buttons": {
+      "create": "Create",
+      "edit": "Edit",
+      "delete": "Delete",
+      "logout": "Logout",
+      "search": "Search",
+      "save": "Save",
+      "cancel": "Cancel",
+      "login": "Login",
+      "nextDay": "Next Day",
+      "clear": "Clear",
+      "saveBooking": "Save Booking",
+      "addExtra": "Add Extra",
+      "recalculate": "Recalculate",
+      "review": "revisar",
+      "newBudget": "New Budget",
+      "sendEmail": "Send Email"
+    },
+    "busTypesPage": {
+      "true": "yes"
+    },
+    "modalLabels": {
+      "restHours": {
+        "maxDrivingTime": "Maximum Driving Time without rest (hours)",
+        "mandatoryRest": "Mandatory Rest Duration (hours)",
+        "excursionsDurationLimit": "Excursions Duration Limit (hours)",
+        "fullDayDriving": "Limit Full Day of Driving (hours)",
+        "fullDayRest": "Full Day Rest (hours)"
+      },
+      "baseAddress": {
+        "address": "Address"
+      },
+      "baseCost": {
+        "pricePerKm": "Price Per Kilometer",
+        "pricePerMinute": "Price Per Minute"
+      },
+      "busCategory": {
+        "name": "Name",
+        "adjustmentPercentage": "Adjustment Percentage (%)"
+      },
+      "busType": {
+        "numberOfPeople": "Number of People",
+        "MinimumSeats": "Minimum Seats",
+        "MaximumSeats": "Maximum Seats",
+        "adjustmentPercentage": "Adjustment Percentage (%)"
+      },
+      "busyHours": {
+        "morningBusyHours": "Morning Busy Hours",
+        "afternoonBusyHours": "Afternoon Busy Hours",
+        "adjustmentPercentage": "Adjustment Percentage (%)"
+      },
+      "extras": {
+        "name": "Name",
+        "price": "Price (€)",
+        "hours": "Hours"
+      },
+      "googleIncrement": {
+        "increment": "Time Increment Percentage (%)"
+      },
+      "nightHours": {
+        "nightHours": "Night Hours",
+        "adjustmentPercentage": "Adjustment Percentage (%)"
+      },
+      "season": {
+        "name": "Season Name",
+        "adjustmentPercentage": "Adjustment Percentage (%)"
+      },
+      "service": {
+        "name": "Name",
+        "order": "Order"
+      },
+      "serviceMinimumPricing": {
+        "minimumKm": "Minimum Kilometers",
+        "minimumTime": "Minimum Time (Minutes)"
+      },
+      "VAT": {
+        "vatRate": "VAT Rate (%)"
+      },
+      "configureTrips": {
+        "minimumKm": "Minimum Kilometers per day",
+        "minimumTimePerDay": "Tiempo mínimo por día"
+      },
+      "configureWeddings": {
+        "name": "Time limit from last stop to dropoff"
+      },
+      "addExtra": {
+        "title": "Add Extra",
+        "description": "Description of the extra",
+        "price": "Price of the extra",
+        "day": "Day",
+        "selectDay": "Select Day"
+      }
+    },
+    "deleteCustomExtraModal": {
+      "title": "Are you sure?",
+      "description": "Do you really want to delete this extra? This action cannot be undone."
+    },
+    "bookings": {
+      "bookedBusesTitle": "Buses Booked",
+      "busSummary": "Bus Type: %{busTypeId}, Quantity: %{quantity}"
+    },
+    "pagination": {
+      "noPages": "No results available",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page",
+      "of": "of"
+    },
+    "errors": {
+      "userEmailNotFound": "User email not found.",
+      "saveFailed": "Failed to save booking.",
+      "bookingSaveFailed": "Booking save failed.",
+      "emailFailedTitle": "Email Failed",
+      "bookingFailedTitle": "Booking Failed",
+      "unexpectedError": "An unexpected error occurred. Please try again later.",
+      "adminEmailFailed": "Failed to send email to the admin.",
+      "emailFailed": "Failed to send email.",
+      "dbImportsError": "Error importing data from the database.",
+      "noSeasonFound": "No season found for the selected date.",
+      "noPricingData": "No pricing data found.",
+      "restHoursFetchError": "Error fetching rest hours.",
+      "extrasCalculationError": "Error calculating extras: %{message}."
+    },
+    "success": {
+      "bookingRequested": "Your booking request has been sent.",
+      "bookingSaved": "Your booking has been saved successfully.",
+      "bookingSavedTitle": "Booking Saved",
+      "bookingSuccessfulTitle": "Booking Successful",
+      "emailSent": "Email sent successfully."
+    },
+    "email": {
+      "subject": "Booking Details",
+      "requestSubject": "Booking Request Details",
+      "adminRequestSubject": "New Booking Request",
+      "accepted": "Reservation accepted",
+      "declined": "Reservation declined",
+      "bookingSaved": "Your booking has been saved successfully."
+    }
+  },
+  "loggedIn": "Welcome, %{email}",
+  "bookingPage": {
+    "title": "solicita tu persupuesto ahora",
+    "labels": {
+      "locations": "Pick-up and drop-off location Administrator",
+      "pickupDate": "Pickup date",
+      "pickupTime": "Pickup Time",
+      "selectBus": "Type of Bus",
+      "bus": "Bus",
+      "buses": "Buses"
+    },
+    "placeholders": {
+      "locations": "Choose locations",
+      "selectDate": "Selecciona una fecha",
+      "selectBus": "Select type of Bus",
+      "selectedBuses": "Selected Buses",
+      "selectedSingleBus": "Autocar seleccionado",
+      "selectTime": "Select a time"
+    },
+    "locationsModal": {
+      "pickup": "Pickup",
+      "dropOff": "drop-off",
+      "pickupLocation": "Pickup Location",
+      "dropOffLocation": "Drop-off Location",
+      "stop": "Stop",
+      "stopTransfers": "Stop",
+      "addStop": "Add a stop",
+      "addRegularStop": "Add regular stop",
+      "addLastStop": "Add last stop",
+      "errorMessage": "You must fulfill all fields!",
+      "addStopTranslados": "Add a stop"
+    },
+    "tripsModal": {
+      "SelectNumberOfDays": "Select Number of Days",
+      "cancel": "Cancel",
+      "continue": "Continue",
+      "day": "Day"
+    },
+    "busOptions": "Bus of %{numberOfPeople} people",
+    "noTollsIncluded": "*Tolls are not included",
+    "errors": {
+      "title": "Error",
+      "longerThan14H": "Ha ocurrido un error: Total excursion duration cannot exceed %{hours} hours from pickup to drop-off.",
+      "longerDriveThan9H": "Total driving time from pickup to dropoff exceeds %{hours} hours.",
+      "longerDriveThan2H": "The celebration venue is too far away.",
+      "longerDriveThan18H": "Total driving time from base to base exceeds %{hours} hours",
+      "longerDriveThanDaysDefined": "Total driving time from pickup to dropoff exceeds %{days} days",
+      "lastReturnShouldHaveAllBuses": "On the last return you must select all %{buses} of the buses",
+      "configurationLoadError": "There was an issue loading the required configuration data. Please refresh the page or try again later."
+    },
+    "returnTripsModal": {
+      "title": "Bus Returns from %{location}",
+      "addTrip": "Add Return",
+      "trip": "Return",
+      "selectBus": "Select Bus"
+    },
+    "busReturns": "Bus returns",
+    "vat": "VAT included %{vat} €",
+    "luxPromo": "For only {{price}} € you can enjoy luxury buses"
+  },
+  "timeInputPlaceholder": "Hora de salida",
+  "busSelection": {
+    "singleBus": "%{count} bus of %{seats} people",
+    "multipleBuses": "%{count} buses of %{seats} people"
+  },
+  "results": {
+    "totalPrice": "Total %{price}€",
+    "noStops": "No stops",
+    "summary": "¡muchas gracias!",
+    "information": "Te hemos enviado los detalles del presupuesto por email",
+    "reminder": "No olvides solicitar la reserva del servicio. En ese caso, estudiaremos nuestra disponibilidad y confirmaremos tu reserva."
+  },
+  "footer": {
+    "logoAlt": "Esteban Rivas Logo",
+    "address": {
+      "line1": "Esteban Rivas, 15",
+      "line2": "Polígono Industrial San Marcos",
+      "line3": "28906 Getafe - Madrid"
+    },
+    "phone": {
+      "number": "916 937 711",
+      "commercial": "Commercial attention: M-F (9-19h) / S-S (9-18h)",
+      "customerService": "Customer service: 24 hours / 365 days"
+    },
+    "email": "info@estebanrivas.es",
+    "links": {
+      "aboutUs": "about us",
+      "ourHistory": "our history",
+      "ourTeam": "our team",
+      "ourClients": "our clients",
+      "faq": "frequently asked questions",
+      "contact": "contact",
+      "blog": "blog",
+      "ourServices": "our services",
+      "busRental": "Bus, minibus and microbus rental",
+      "movingStorage": "Moving and storage",
+      "carRental": "Car and minivan rental with driver",
+      "vanRental": "Van rental",
+      "storageRental": "Storage rental",
+      "vehicleMaintenance": "Parking and maintenance of heavy vehicles",
+      "workWithUs": "work with us"
+    },
+    "rightsReserved": "Esteban Rivas S.A. All rights reserved.",
+    "policies": {
+      "legalNotice": {
+        "text": "Legal Notice",
+        "link": "https://estebanrivas.es/aviso-legal/"
+      },
+      "cookiePolicy": {
+        "text": "Cookie Policy",
+        "link": "https://estebanrivas.es/politica-de-cookies/"
+      },
+      "qualityPolicy": {
+        "text": "Quality Policy / Environmental Policy",
+        "link": "https://estebanrivas.es/politica-de-calidad/"
+      },
+      "ethicalChannel": {
+        "text": "Ethical Channel",
+        "link": "https://www.suiteadeplus.com/web/canal-etico/registro?id=Hrvs6iN0"
+      }
+    }
+  }
+}
