@@ -1,0 +1,511 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["metrics"]
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("POSTGRES_PRISMA_URL")
+  directUrl    = env("POSTGRES_URL_NON_POOLING")
+  relationMode = "prisma"
+}
+
+model BaseAddress {
+  /// Title: base
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: false
+  id        String   @id @default(cuid())
+  address   String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("base_address")
+}
+
+model BusType {
+  /// Title: busTypes
+  /// CanCreate: true
+  /// CanEdit: true
+  /// CanDelete: true
+  id                   String  @id @default(cuid())
+  numberOfPeople       Int     @unique
+  rangeMinSeats        Int
+  rangeMaxSeats        Int
+  adjustmentPercentage Float
+  isDefault            Boolean
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@map("bus_type")
+}
+
+model Service {
+  /// Title: services
+  /// CanCreate: true
+  /// CanEdit: true
+  /// CanDelete: true
+  id        String   @id @default(cuid())
+  name      String   @unique
+  order     Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  minimumPricing ServiceMinimumPricing[]
+
+  @@map("service")
+}
+
+model BusCategory {
+  /// Title: busCategory
+  /// CanCreate: true
+  /// CanEdit: true
+  /// CanDelete: true
+  id                   String   @id @default(cuid())
+  name                 String   @unique
+  adjustmentPercentage Float
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@map("bus_category")
+}
+
+model User {
+  /// Title: users
+  /// CanCreate: true
+  /// CanEdit: true
+  /// CanDelete: true
+  id        String   @id @default(cuid())
+  email     String   @unique
+  role      UserRole @default(USER)
+  userType  UserType @default(PERSONAL)
+
+  fullName  String?  
+  address   String?  
+  postalCode String?
+  city      String?
+  province  String? 
+  country   String?
+  phone     String?
+  docId     String?
+
+  contacto  String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  bookings  Bookings[]
+
+  @@map("user")
+}
+
+enum UserType {
+  PERSONAL
+  COMPANY
+}
+
+model VAT {
+  /// Title: vat
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: false
+  id        String   @id @default(cuid())
+  rate      Float    
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("vat")
+}
+
+model RestHours {
+  /// Title: maximumDrivingTime
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: false
+  id                String   @id @default(cuid())
+  drivingTime       Float   
+  restDuration      Float    
+  fullDayDriving    Float
+  fullDayRest       Float
+  excursionsLimit   Float
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("rest_hours")
+}
+
+model GoogleIncrement {
+  /// Title: googleIncrement
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: false
+  id          String   @id @default(cuid())
+  adjustmentPercentage Float 
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("google_increment")
+}
+
+model Season {
+  /// Title: seasons
+  /// CanCreate: true
+  /// CanEdit: true
+  /// CanDelete: true
+  id                   String   @id @default(cuid())
+  name                 String   @unique
+  adjustmentPercentage Float
+  color                String  
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  seasonDays           SeasonDay[]
+  
+  @@map("season")
+}
+
+model SeasonDay {
+  /// Title: seasonDays
+  /// CanCreate: true
+  /// CanEdit: true
+  /// CanDelete: true
+  id        String   @id @default(cuid())
+  day       DateTime @unique
+  seasonId  String   
+  season    Season   @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+
+  @@index([seasonId])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("season_day")
+}
+
+model BusyHours {
+  /// Title: peakHours
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: false
+  id                   String   @id @default(cuid())
+  startTimeMorning     String   
+  endTimeMorning       String   
+  startTimeAfternoon   String  
+  endTimeAfternoon     String  
+  adjustmentPercentage Float    
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@map("busy_hours")
+}
+
+model NightHours {
+  /// Title: nightTime
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: false
+  id                   String   @id @default(cuid())
+  startTime            String   
+  endTime              String   
+  adjustmentPercentage Float  
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@map("night_hours")
+}
+
+
+model BaseCost {
+  /// Title: basePrice
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: false
+  id            String  @id @default(cuid())
+  pricePerKm    Float
+  pricePerMinute Float
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("base_cost")
+}
+
+model ServiceMinimumPricing {
+  /// Title: serviceMinimumPricing
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: false
+  id           String   @id @default(cuid())
+  serviceName  String
+  minimumKM    Float
+  minimumTime  Int
+
+  service      Service  @relation(fields: [serviceName], references: [id], onDelete: Cascade)
+
+  @@index([serviceName])
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("service_minimum_pricing")
+}
+
+
+
+model Extra {
+  /// Title: extra
+  /// CanCreate: true
+  /// CanEdit: true
+  /// CanDelete: true
+  id        String    @id @default(cuid())
+  name      String    @unique
+  price     Float
+  startTime String?   
+  endTime   String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  pricingResultExtras PricingResultExtra[] @relation("ExtraToPricingResultExtra") // Added relation
+
+  @@map("extra")
+}
+
+model ConfigureTrips {
+  /// Title: configureTrips
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: true
+  id               String   @id @default(cuid())
+  minimumKmPerDay  Float
+  minimumTimePerDay Float
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("configure_trips")
+}
+
+model ConfigureWeddings {
+  /// Title: configureWeddings
+  /// CanCreate: false
+  /// CanEdit: true
+  /// CanDelete: true
+  id               String   @id @default(cuid())
+  minimumReturnTime Float
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("configure_weddings")
+}
+
+enum UserRole {
+  ADMIN
+  STAFF
+  USER
+}
+
+enum BookingsType {
+  admin_saved
+  saved
+  requested
+  accepted
+  declined
+}
+
+model Bookings {
+  /// Title: searchedTrips
+  /// CanCreate: false
+  /// CanEdit: false
+  /// CanDelete: false
+  id                String            @id @default(uuid())
+  baseAddress       String
+  serviceType       String            // Excursion, Wedding, Trip, etc.
+  date              String            // Changed from DateTime to String
+  totalDuration     Float?               // Total duration in minutes
+  totalDistance     Float?             // Total distance in kilometers
+  totalPrice        Float?             // Total price for all days
+  days              Int               // Number of days in the trip
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  userId         String?
+  user           User?        @relation(fields: [userId], references: [id])
+
+  bookingType    BookingsType @default(requested)
+
+  // Single-field indexes
+  @@index([serviceType])
+  @@index([createdAt])
+  @@index([date])
+  @@index([bookingType])
+  @@index([userId])
+
+  // Composite indexes (two-column)
+  @@index([serviceType, createdAt])
+  @@index([serviceType, date])
+  @@index([bookingType, createdAt])
+  @@index([userId, createdAt])
+  @@index([userId, bookingType])
+
+  // Composite indexes (three-column)
+  @@index([serviceType, bookingType, createdAt])
+  @@index([userId, serviceType, createdAt])
+  @@index([userId, bookingType, createdAt])
+
+  // Composite index (four-column) for queries filtering on all of these at once
+  @@index([userId, serviceType, bookingType, createdAt])
+
+  dailyStops        DailyStop[]
+  pricingResults    PricingResult[]
+  missingKmInfo     MissingKmInfo?
+  buses             BookingsSelectedBuses[]         // Relation to TripBus model
+  customExtras      CustomExtras[] // Relation to CustomExtras
+  returnTrip        ReturnTrip[]
+}
+
+model BookingsSelectedBuses {
+  id                String            @id @default(uuid())
+  tripId            String
+  bookings          Bookings              @relation(fields: [tripId], references: [id])
+  busTypeId         String
+  quantity          Int               // Number of buses of this type
+
+  @@index([tripId, busTypeId], name: "trip_bus_unique")
+}
+
+model DailyStop {
+  id              String    @id @default(uuid())
+  tripId          String
+  bookings        Bookings  @relation(fields: [tripId], references: [id])
+  dayIndex        Int
+
+  // Remove or ignore the old relation fields if no longer required:
+  // pickupId       String
+  // pickup         StopData  @relation("PickupRelation", fields: [pickupId], references: [id])
+  // dropoffId      String
+  // dropoff        StopData  @relation("DropoffRelation", fields: [dropoffId], references: [id])
+  // intermediates  StopData[] @relation("IntermediateRelation")
+
+  // New JSON fields for stops data
+  pickup      Json?     // Stores pickup data as JSON
+  dropoff     Json?     // Stores dropoff data as JSON
+  intermediates Json?    // Stores an array of intermediate stops as JSON
+
+  @@index([tripId])
+}
+
+model ReturnTrip {
+  id              String    @id @default(uuid())
+  tripId          String
+  bookings        Bookings  @relation(fields: [tripId], references: [id])
+  address         String
+  stops           Json?
+  time            String
+  buses           Json?
+}
+
+
+model PricingResult {
+  id                String            @id @default(uuid())
+  tripId            String
+  bookings          Bookings              @relation(fields: [tripId], references: [id])
+  dayIndex          Int               // Day of the trip (1-based index)
+  totalPrice        Float?            // Total price for this day
+  totalDuration     Float?            // Total duration for this day in minutes
+  restTimePrice     Float?            // Price for rest time, if applicable
+  minimumPerDayDuration Float?        // Minimum required duration per day
+  minimumPricePerDayDuration Float?   // Minimum price for required duration
+  minimumTimePerDayDuration Float?    // Minimum required time per day
+  segments          SegmentPricing[]
+  details           PricingDetails[]
+  extras            PricingResultExtra[]  // Changed from direct relation to an intermediate table
+  middleSegmentsWithPrices MiddleSegmentPricing[]
+
+
+  @@index([tripId])
+}
+
+model PricingResultExtra {
+  id                String       @id @default(uuid())
+  pricingResultId   String
+  pricingResult     PricingResult @relation(fields: [pricingResultId], references: [id], onDelete: Cascade)
+  extraId           String
+  extra             Extra         @relation(fields: [extraId], references: [id], onDelete: Cascade, name: "ExtraToPricingResultExtra") // Matching relation name
+
+  @@map("pricing_result_extra")
+}
+
+model SegmentPricing {
+  id                String            @id @default(uuid())
+  pricingResultId   String
+  pricingResult     PricingResult     @relation(fields: [pricingResultId], references: [id])
+  segment           Int               // Segment number
+  distance          Float?             // Distance in kilometers
+  duration          Float?               // Duration in minutes
+  adjustedDistance  Float?             // Adjusted distance in kilometers
+  adjustedDuration  Float?               // Adjusted duration in minutes
+  kmPrice           Float?             // Price for the distance
+  timePrice         Float?             // Price for the time
+  price             Float?             // Total price for the segment
+  priceWithoutMinimums Float?          // Price without considering minimums
+  kmPriceWithMinimum Float?            // Price per km with minimum adjustment
+  timePriceWithMinimum Float?          // Price per minute with minimum adjustment
+  kmPriceWithoutMinimum Float?         // Price per km without minimum adjustment
+  timePriceWithoutMinimum Float?       // Price per minute without minimum adjustment
+  totalPriceWithMinimumWithoutRest Float? // Total price with minimum but without rest
+  restPrice         Float?             // Price for rest time in this segment
+  totalPrice        Float?             // Final total price for this segment
+  segmentStartTime  String?           // Changed from DateTime? to String?
+}
+
+model PricingDetails {
+  id                String            @id @default(uuid())
+  pricingResultId   String
+  pricingResult     PricingResult     @relation(fields: [pricingResultId], references: [id])
+  numberOfPeople    Int               // Number of people on this bus
+  finalPricePerKm   Float?             // Final price per kilometer
+  finalPricePerMinute Float?           // Final price per minute
+  seasonAdjustment  Float?            // Adjustment for season
+  busTypeAdjustment Float?             // Adjustment based on bus type
+  busyTimeAdjustment Float?           // Adjustment for busy hours
+  nightTimeAdjustment Float?          // Adjustment for night hours
+}
+
+model MiddleSegmentPricing {
+  id                String            @id @default(uuid())
+  pricingResultId   String
+  pricingResult     PricingResult     @relation(fields: [pricingResultId], references: [id])
+  origin            String?            // Origin of the segment
+  arrivalTime       String?           // Changed from DateTime? to String?
+  destination       String?            // Destination of the segment
+  distance          Float?             // Distance in kilometers
+  kmPrice           Float?             // Price for kilometers
+  timePrice         Float?             // Price for time
+  priceWithoutRest  Float?             // Price without considering rest time
+  duration          Float?               // Duration in minutes
+  restPrice         Float?             // Price for rest time
+  totalPrice        Float?             // Total price for this segment
+  waitingTime       Float?               // Waiting time in minutes
+  totalDuration     Float?               // Total duration including waiting
+  pickupTime        String?           // Changed from DateTime? to String?
+}
+
+
+
+model MissingKmInfo {
+  id                String            @id @default(uuid())
+  tripId            String            @unique
+  bookings          Bookings              @relation(fields: [tripId], references: [id])
+  effectiveDistance Float?             // Total effective distance traveled
+  adjustedDistance  Float?             // Adjusted distance considering minimum requirements
+  missingKm         Float?             // Deficit in kilometers to meet the minimum
+  additionalPrice   Float?             // Additional price for missing kilometers
+  differenceInTotalPrice Float?        // Difference in total price due to adjustments
+}
+
+model CustomExtras {
+  id                String        @id @default(cuid())
+  name              String
+  price             Float
+  bookingId         String
+  booking     Bookings @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+
+  @@map("custom_extras")
+}
